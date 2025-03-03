@@ -20,7 +20,7 @@ The project consists of two primary features:
 This application was readily was deployed in Streamlit.io
 here is the link [copper-industry-model.streamlit.app](https://copper-industry-model.streamlit.app/)
 
----
+
 
 ## Features
 
