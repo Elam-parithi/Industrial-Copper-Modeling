@@ -13,12 +13,12 @@
                "1668701376", "1668701698", "1668701718", "1668701725", "1670798778", "1671863738",
                "1671876026", "1690738206", "1690738219", "1693867550", "1693867563", "1721130331", "1722207579"],
   "price_artifacts": {
-    "model": "model_data/model.pkl",
-    "scaler":  "model_data/scaler.pkl",
-    "transformer":  "model_data/t.pkl",
-    "s_pkl":  "model_data/s.pkl"},
+    "model": "model_data/dtr_model.pkl",
+    "scaler":  "model_data/dtr_scaler.pkl",
+    "Item_encoded":  "model_data/dtr_ohe_1.pkl",
+    "status_encoded":  "model_data/dtr_ohe_2.pkl"},
   "status_artifacts": {
-    "model": "model_data/cmodel.pkl",
-    "scaler": "model_data/cscaler.pkl",
-    "transformer": "model_data/ct.pkl"}
+    "model": "model_data/dtc_model.pkl",
+    "scaler": "model_data/dtc_scaler.pkl",
+    "Item_encoded": "model_data/dtc_encode.pkl"}
 }

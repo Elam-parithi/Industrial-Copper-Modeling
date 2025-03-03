@@ -24,7 +24,7 @@ status_artifacts = config["status_artifacts"]
 
 
 @st.cache_data
-def load_model_artifacts(artifacts_dict: dict) -> Tuple[Any, Any, Any]:
+def load_model_artifacts(artifacts_dict: dict):
     """
     Loads model artifacts (model, scaler, and transformer) using pickle. Returns the
     data in order else raises the errors.
@@ -40,11 +40,12 @@ def load_model_artifacts(artifacts_dict: dict) -> Tuple[Any, Any, Any]:
         pickle_output = pickle.load(f_data)
         f_data.close()
         return pickle_output
+
+    return_pack = []
     try:
-        model = _load_artifact(artifacts_dict["model"])
-        scaler = _load_artifact(artifacts_dict["scaler"])
-        transformer = _load_artifact(artifacts_dict["transformer"])
-        return model, scaler, transformer
+        for item in artifacts_dict:
+            return_pack.append(_load_artifact(artifacts_dict[item]))
+        return tuple(return_pack)
 
     except KeyError as e:
         print(f"Missing required key in artifacts dictionary: {e}")

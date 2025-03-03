@@ -33,17 +33,13 @@ with tab1:
 
         price_vars = [quantity_tons, thickness, width, customer]
     if input_validation(submit_button, price_vars):
-        price_model, price_scaler, price_transformer = load_model_artifacts(price_artifacts)
-
-        with open(r"model_data/s.pkl", 'rb') as f:
-            s_loaded = pickle.load(f)
+        price_model, price_scaler, price_transformer, s_loaded = load_model_artifacts(price_artifacts)
 
         new_sample = np.array([[np.log(float(quantity_tons)), price_application, np.log(float(thickness)), float(width),
                                 price_country, float(customer), int(price_product_ref), price_item_type, price_status]])
-
         new_sample_ohe = price_transformer.transform(new_sample[:, [7]]).toarray()
         new_sample_be = s_loaded.transform(new_sample[:, [8]]).toarray()
-        new_sample = np.concatenate((new_sample[:, [0, 1, 2, 3, 4, 5, 6, ]], new_sample_ohe, new_sample_be), axis=1)
+        new_sample = np.hstack((new_sample[:, [0, 1, 2, 3, 4, 5, 6, ]], new_sample_ohe, new_sample_be))
         new_sample1 = price_scaler.transform(new_sample)
         predicted_price = price_model.predict(new_sample1)[0]
         st.write('## :green[Predicted selling price:] ', np.exp(predicted_price))
@@ -67,8 +63,9 @@ with tab2:
             status_submit = st.form_submit_button(label="PREDICT")
 
         status_vars = [status_quantity, status_thickness, status_width, status_customer, status_selling]
+
     if input_validation(status_submit, status_vars):
-        status_loaded_model, status_scaler_loaded, ct_loaded = load_model_artifacts(status_artifacts)
+        status_loaded_model, status_scaler_loaded, Item_encode = load_model_artifacts(status_artifacts)
 
         new_sample = np.array([[np.log(float(status_quantity)),
                                 np.log(float(status_selling)), status_application,
@@ -78,11 +75,11 @@ with tab2:
                                 int(status_product_ref),
                                 status_item_type]])
 
-        new_sample_ohe = ct_loaded.transform(new_sample[:, [8]]).toarray()
-        new_sample = np.concatenate((new_sample[:, [0, 1, 2, 3, 4, 5, 6, 7]], new_sample_ohe), axis=1)
+        new_sample_ohe = Item_encode.transform(new_sample[:, [8]]).toarray()
+        new_sample = np.hstack((new_sample[:, [0, 1, 2, 3, 4, 5, 6, 7]], new_sample_ohe))
         new_sample = status_scaler_loaded.transform(new_sample)
         predicated_status = status_loaded_model.predict(new_sample)
         if predicated_status == 1:
-            st.write('## :green[The Status is Won] ')
+            st.write('## :green[✌️The Status is Won] ')
         else:
-            st.write('## :red[The status is Lost] ')
+            st.write('## :red[👎 The status is Lost] ')
