@@ -1,4 +1,5 @@
 # Model for Copper Industry
+---
 
 ![streamlit](https://img.shields.io/badge/streamlit-1.42.2-red)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6.1-purple)
@@ -19,8 +20,6 @@ The project consists of two primary features:
 
 This application was readily was deployed in Streamlit.io
 here is the link [copper-industry-model.streamlit.app](https://copper-industry-model.streamlit.app/)
-
-
 
 ## Features
 
