@@ -15,12 +15,6 @@ The project consists of two primary features:
  1. **Sale Price Prediction**: Predicts the selling price of copper based on input variables such as quantity, thickness, width, country of sale, customer details, and more.
  2. **Status Prediction**: Determines whether the sale status is "Won" or "Lost" using various attributes related to the sale transaction.
 
-
-### Streamlit Cloud
-This application was readily was deployed in Streamlit.io
- Here is the link [copper-industry-model.streamlit.app](https://copper-industry-model.streamlit.app/)
----
-
 ## Features
 
 1. **Dynamic Web Interface**
@@ -38,8 +32,6 @@ This application was readily was deployed in Streamlit.io
 4. **Real-Time Analysis**
    - Swift feedback on predictions provided directly after form submission.
 
----
-
 ## System Requirements
 
 1. Python: `>= 3.8`
@@ -53,8 +45,6 @@ This application was readily was deployed in Streamlit.io
    - Windows 10 or later
    - macOS Sonoma or later
    - Linux (Ubuntu 20.04 or later)
-
----
 
 ## Installation
 
@@ -88,8 +78,6 @@ streamlit run streamlit_copper_model.py
 
 The application will launch in your default browser. If it doesn’t open, navigate to the URL provided in the terminal (e.g., `http://localhost:8501`).
 
----
-
 ## File Descriptions
 
 ### 1. `streamlit_copper_model.py`
@@ -107,15 +95,13 @@ Key functions:
 - `input_validation()`:
   - Validates user inputs for numerical ranges and required fields.
 
-### 3. `artifacts/`
+### 3. `model_data/`
 This directory contains pre-trained models and supporting files, such as:
 - `price_artifacts.pkl`: Contains model, scaler, and encoders for sale price prediction.
 - `status_artifacts.pkl`: Contains model, scaler, and encoders for status prediction.
 
-### 4. `assets/`
-Stores additional static resources like logos, icons, or imagery used in the UI.
-
----
+### 3. `source_data/`
+This contains the source *.csv files here.
 
 ## Usage Instructions
 
@@ -135,8 +121,6 @@ Stores additional static resources like logos, icons, or imagery used in the UI.
 3. Click **"PREDICT"**.
 4. The application will display whether the sale's status is **Won** or **Lost**.
 
----
-
 ## Future Enhancements
 
 1. **Expanded Predictive Models:**
@@ -149,16 +133,12 @@ Stores additional static resources like logos, icons, or imagery used in the UI.
 3. **Integration with Databases:**
    - Integrate with a database for historical analysis of predictions.
 
----
-
 ## Acknowledgments
 - **Libraries Used:**
   - **Streamlit**: For an intuitive web interface.
   - **Scikit-learn**: For model preprocessing, scalers, and the core ML models.
   - **NumPy**: For matrix and numerical operations.
-- **Dataset**: Not explicitly described but assumed to influence model training.
-
----
+  - **Dataset**: Not explicitly described but assumed to influence model training.
 
 ## License
 
