@@ -1,4 +1,4 @@
-# Model for Copper Industry
+# ML Model for copper-Industry
 
 ![streamlit](https://img.shields.io/badge/streamlit-1.42.2-red)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6.1-purple)
@@ -15,14 +15,11 @@ The project consists of two primary features:
  1. **Sale Price Prediction**: Predicts the selling price of copper based on input variables such as quantity, thickness, width, country of sale, customer details, and more.
  2. **Status Prediction**: Determines whether the sale status is "Won" or "Lost" using various attributes related to the sale transaction.
 
-#### Developer
-This project was developed by [Elamparithi](https://www.linkedin.com/in/elamparithi-t/)
-<a href="https://www.linkedin.com/in/elamparithi-t/"><img src="Icons/LI-Logo.png" alt="linkedin.com" width="120" height="40"></a>
 
-## streamlit Deploynment
-
+### Streamlit Cloud
 This application was readily was deployed in Streamlit.io
-here is the link [copper-industry-model.streamlit.app](https://copper-industry-model.streamlit.app/)
+ Here is the link [copper-industry-model.streamlit.app](https://copper-industry-model.streamlit.app/)
+---
 
 ## Features
 
@@ -41,6 +38,8 @@ here is the link [copper-industry-model.streamlit.app](https://copper-industry-m
 4. **Real-Time Analysis**
    - Swift feedback on predictions provided directly after form submission.
 
+---
+
 ## System Requirements
 
 1. Python: `>= 3.8`
@@ -54,6 +53,8 @@ here is the link [copper-industry-model.streamlit.app](https://copper-industry-m
    - Windows 10 or later
    - macOS Sonoma or later
    - Linux (Ubuntu 20.04 or later)
+
+---
 
 ## Installation
 
@@ -87,6 +88,8 @@ streamlit run streamlit_copper_model.py
 
 The application will launch in your default browser. If it doesn’t open, navigate to the URL provided in the terminal (e.g., `http://localhost:8501`).
 
+---
+
 ## File Descriptions
 
 ### 1. `streamlit_copper_model.py`
@@ -112,6 +115,8 @@ This directory contains pre-trained models and supporting files, such as:
 ### 4. `assets/`
 Stores additional static resources like logos, icons, or imagery used in the UI.
 
+---
+
 ## Usage Instructions
 
 ### Feature 1: Sale Price Prediction
@@ -130,6 +135,8 @@ Stores additional static resources like logos, icons, or imagery used in the UI.
 3. Click **"PREDICT"**.
 4. The application will display whether the sale's status is **Won** or **Lost**.
 
+---
+
 ## Future Enhancements
 
 1. **Expanded Predictive Models:**
@@ -142,6 +149,8 @@ Stores additional static resources like logos, icons, or imagery used in the UI.
 3. **Integration with Databases:**
    - Integrate with a database for historical analysis of predictions.
 
+---
+
 ## Acknowledgments
 - **Libraries Used:**
   - **Streamlit**: For an intuitive web interface.
@@ -149,6 +158,13 @@ Stores additional static resources like logos, icons, or imagery used in the UI.
   - **NumPy**: For matrix and numerical operations.
 - **Dataset**: Not explicitly described but assumed to influence model training.
 
+---
+
 ## License
 
 This project is licensed under the MIT License. Make sure to provide appropriate credit and include the license when sharing or modifying the project.
+
+## Developer
+   This application was developed by [Elamparithi](https://www.linkedin.com/in/elamparithi-t/)
+    
+<a href="https://www.linkedin.com/in/elamparithi-t/"><img src="Documents/Icons/LI-Logo.png" alt="linkedin.com" width="120" height="38"></a>
