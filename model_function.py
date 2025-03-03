@@ -84,14 +84,13 @@ def input_validation(button: bool, var_list: List[str]) -> bool:
     :param var_list: List of variables to check.
     :return: True if all inputs are valid, otherwise False.
     """
-    print("Checking validity of inputs")
     valid_result, invalid_item = pattern_validation(var_list)
 
     if button and not valid_result:
         if not invalid_item:
-            st.write("Please enter a valid number; space is not allowed.")
+            st.write("## :red[❌ Please enter a valid number, space is not allowed.]")
         else:
-            st.write(f"You have entered an invalid value: {invalid_item}")
+            st.write(f"## :red[❌ You have entered an invalid value: {invalid_item}]")
         return False
 
     return valid_result if button else False

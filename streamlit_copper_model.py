@@ -97,4 +97,4 @@ with tab2:
         if predicated_status == 1:
             st.write('## :green[✌️The Status is Won] ')
         else:
-            st.write('## :red[👎 The status is Lost] ')
+            st.write('## :red[❌ The status is Lost] ')
