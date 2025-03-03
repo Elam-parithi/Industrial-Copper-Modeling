@@ -5,13 +5,28 @@ This is the user interface of model prediction and this will use the pretrained 
 """
 import numpy as np
 from model_function import *
+import warnings
+
+warnings.filterwarnings("ignore")
 
 st.set_page_config(page_title="Industrial Copper Modeling",
                    page_icon=":factory:",
-                   layout="wide")
+                   layout="wide",
+                   menu_items={
+                       "About": """
+                        **Industrial Copper Modeling**  
+                        This is a machine learning model created with **Python** and **Scikit-learn**,  
+                        along with other supporting models. UI is built using **Streamlit**.
+                
+                        **👨‍💻 Developer:** [Elamparithi](https://www.linkedin.com/in/elamparithi-t/)  
+                        **📂 GitHub Repository:** [Industrial Copper Modeling](https://github.com/Elam-parithi/Industrial-Copper-Modeling)  
+                        """
+                        }
+                   )
 
 st.header(":factory: :green[Industrial] :orange[copper] :violet[model]",
           anchor=False, divider=None)
+st.html('Created by <b><a href="https://www.linkedin.com/in/elamparithi-t/" target="_blank">Elamparithi</a></b>')
 st.write('')
 tab1, tab2 = st.tabs(["Sale price prediction", "Status prediction"])
 with tab1:
