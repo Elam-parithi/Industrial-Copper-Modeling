@@ -15,6 +15,10 @@ The project consists of two primary features:
  1. **Sale Price Prediction**: Predicts the selling price of copper based on input variables such as quantity, thickness, width, country of sale, customer details, and more.
  2. **Status Prediction**: Determines whether the sale status is "Won" or "Lost" using various attributes related to the sale transaction.
 
+#### Developer
+This project was developed by [Elamparithi](https://www.linkedin.com/in/elamparithi-t/)
+<a href="https://www.linkedin.com/in/elamparithi-t/"><img src="Icons/LI-Logo.png" alt="linkedin.com" width="120" height="40"></a>
+
 ## streamlit Deploynment
 
 This application was readily was deployed in Streamlit.io
