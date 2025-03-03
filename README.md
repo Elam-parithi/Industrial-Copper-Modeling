@@ -15,8 +15,8 @@ The project consists of two primary features:
  1. **Sale Price Prediction**: Predicts the selling price of copper based on input variables such as quantity, thickness, width, country of sale, customer details, and more.
  2. **Status Prediction**: Determines whether the sale status is "Won" or "Lost" using various attributes related to the sale transaction.
 
-The application is built using **Streamlit**, **NumPy**, **Scikit-learn**, and other relevant libraries, providing an intuitive web-based interface for users.
-
+This application was readily was deployed in Streamlit.io
+here is the link [copper-industry-model.streamlit.app](https://copper-industry-model.streamlit.app/)
 ---
 
 ## Features
